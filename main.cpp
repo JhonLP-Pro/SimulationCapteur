@@ -34,7 +34,7 @@ int main() {
     cout << "Simulation en cours. Appuyez sur Ctrl+C pour arrêter." << endl;
 
     int tick = 0;
-    while (!stopRequested) {
+    while (!stopRequested && tick < 20) { // Limite à 10 ticks pour éviter une boucle infinie
         myScheduler.simulate(tick++);
         this_thread::sleep_for(chrono::seconds(1));
     }

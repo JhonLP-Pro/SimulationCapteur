@@ -33,7 +33,7 @@ void Sensor::update(int time) {
     measurement << "Capteur ID: " << id
                 << ", Type: " << type
                 << ", Valeur: " << mesure
-                << ", Tour: " << time;
+                << ", seconde: " << time;
 
     if (serverPtr) {
         serverPtr->consoleWrite(measurement.str());
