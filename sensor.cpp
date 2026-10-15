@@ -1,0 +1,46 @@
+#include "sensor.hpp"
+#include <random>
+
+// Constructeur par défaut
+Sensor::Sensor() : id(0), type("inconnu"), serverPtr(nullptr) {}
+
+// Destructeur
+Sensor::~Sensor() {}
+
+// Constructeur avec paramètres
+Sensor::Sensor(int id, string type, double value, class server *serverPtr)
+    : id(id), type(type), serverPtr(serverPtr) {}
+
+// Constructeur de copie
+Sensor::Sensor(const Sensor &s)
+    : id(s.id), type(s.type), serverPtr(s.serverPtr) {}
+
+// Opérateur d'affectation
+Sensor &Sensor::operator=(const Sensor &s) {
+    if (this != &s) {
+        id = s.id;
+        type = s.type;
+        serverPtr = s.serverPtr;
+    }
+    return *this;
+}
+
+// Met à jour la valeur du capteur
+void Sensor::update(int time) {
+    string mesure = generateMeasurement();
+
+    ostringstream measurement;
+    measurement << "Capteur ID: " << id
+                << ", Type: " << type
+                << ", Valeur: " << mesure
+                << ", Tour: " << time;
+
+    if (serverPtr) {
+        serverPtr->consoleWrite(measurement.str());
+        serverPtr->fileWrite(type, measurement.str());
+    }
+}
+
+void Sensor::execute() {
+    // Réservé à l'exécution d'une action propre au capteur.
+}

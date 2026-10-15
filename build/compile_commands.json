@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/main.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/main.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/main.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/main.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/server.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/server.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/server.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/server.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/sensor.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/sensor.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/sensor.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/sensor.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/scheduler.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/scheduler.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/scheduler.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/scheduler.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/temperatureSensor.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/temperatureSensor.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/temperatureSensor.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/temperatureSensor.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/humiditySensor.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/humiditySensor.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/humiditySensor.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/humiditySensor.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/lightSensor.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/lightSensor.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/lightSensor.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/lightSensor.cpp.o"
+},
+{
+  "directory": "/home/jjlapada/Documents/utbm/TPAP4A/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/TPAP4A.dir/soundSensor.cpp.o -c /home/jjlapada/Documents/utbm/TPAP4A/soundSensor.cpp",
+  "file": "/home/jjlapada/Documents/utbm/TPAP4A/soundSensor.cpp",
+  "output": "/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir/soundSensor.cpp.o"
+}
+]
