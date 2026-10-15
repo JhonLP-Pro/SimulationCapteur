@@ -11,9 +11,7 @@ using namespace std;
 
 class server{
     private:
-    ofstream data;
     bool consoleEnabled;
-    map<string, string> latestMeasurements;
     string currentDateTime() const;
     public:
     //forme canononique coplien

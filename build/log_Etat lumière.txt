@@ -1,0 +1,13 @@
+[2026-10-15 12:27:46] Capteur ID: 3, Type: Etat lumière, Valeur: false, seconde: 5
+[2026-10-15 12:29:43] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 0
+[2026-10-15 12:29:44] Capteur ID: 3, Type: Etat lumière, Valeur: false, seconde: 1
+[2026-10-15 12:29:45] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 2
+[2026-10-15 12:29:46] Capteur ID: 3, Type: Etat lumière, Valeur: false, seconde: 3
+[2026-10-15 12:29:47] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 4
+[2026-10-15 12:29:48] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 5
+[2026-10-15 12:29:49] Capteur ID: 3, Type: Etat lumière, Valeur: false, seconde: 6
+[2026-10-15 12:29:50] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 7
+[2026-10-15 12:29:51] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 8
+[2026-10-15 12:29:53] Capteur ID: 3, Type: Etat lumière, Valeur: false, seconde: 9
+[2026-10-15 12:29:54] Capteur ID: 3, Type: Etat lumière, Valeur: true, seconde: 10
+[2026-10-15 12:29:55] Capteur ID: 3, Type: Etat lumière, Valeur: false, seconde: 11

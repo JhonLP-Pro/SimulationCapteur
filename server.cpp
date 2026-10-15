@@ -2,28 +2,27 @@
 
 //constructeur par defaut
 server::server() : consoleEnabled(true) {
-    // Initialisation du flux de sortie vers le fichier de journalisation
-    data.open("log.txt", ios::out | ios::trunc);
-    if (!data.is_open()) {
-        cerr << "Erreur lors de l'ouverture du fichier log.txt" << endl;
+    const string logFiles[] = {
+        "log_Temperature.txt",
+        "log_Humidite.txt",
+        "log_Luminosite.txt",
+        "log_Son.txt"
+    };
+
+    for (const string &filename : logFiles) {
+        ofstream logFile(filename, ios::out | ios::trunc);
+        if (!logFile.is_open()) {
+            cerr << "Erreur lors de la reinitialisation du fichier "
+                 << filename << "." << endl;
+        }
     }
 }
 
 // Destructeur
-server::~server() {
-    if (data.is_open()) {
-        data.close();
-    }
-}
+server::~server() {}
 
 // Constructeur de copie
-server::server(const server &s) : consoleEnabled(s.consoleEnabled) {
-    // Ouverture d'un nouveau fichier de journalisation
-    data.open("log.txt", ios::out | ios::trunc);
-    if (!data.is_open()) {
-        cerr << "Erreur lors de l'ouverture du fichier log.txt" << endl;
-    }
-}
+server::server(const server &s) : consoleEnabled(s.consoleEnabled) {}
 
 // Affichage dans la console
 void server::consoleWrite(string data) {
@@ -32,22 +31,15 @@ void server::consoleWrite(string data) {
     }
 }
 
-// Écriture de la dernière mesure de chaque type dans le fichier
+// Ajoute la mesure au fichier correspondant au type pour la session en cours
 void server::fileWrite(string type, string measurement) {
-    latestMeasurements[type] = "[" + currentDateTime() + "] " + measurement;
-
-    if (this->data.is_open()) {
-        this->data.close();
-    }
-
-    this->data.open("log.txt", ios::out | ios::trunc);
-    if (this->data.is_open()) {
-        for (const auto &entry : latestMeasurements) {
-            this->data << entry.second << endl;
-        }
-        this->data.flush();
+    const string filename = "log_" + type + ".txt";
+    ofstream logFile(filename, ios::out | ios::app);
+    if (logFile.is_open()) {
+        logFile << "[" << currentDateTime() << "] " << measurement << endl;
     } else {
-        cerr << "Erreur: le fichier n'est pas ouvert pour l'écriture." << endl;
+        cerr << "Erreur lors de l'ouverture du fichier " << filename
+             << " pour l'ecriture." << endl;
     }
 }
 

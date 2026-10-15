@@ -1,4 +1,0 @@
-[2026-10-15 12:01:16] Capteur ID: 2, Type: Humidite, Valeur: 2.75, Tour: 19
-[2026-10-15 12:01:16] Capteur ID: 3, Type: Luminosite, Valeur: true, Tour: 19
-[2026-10-15 12:01:16] Capteur ID: 4, Type: Son, Valeur: 42.41, Tour: 19
-[2026-10-15 12:01:16] Capteur ID: 1, Type: Temperature, Valeur: 8.47, Tour: 19

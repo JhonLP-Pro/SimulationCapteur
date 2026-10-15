@@ -1,0 +1,12 @@
+[2026-10-15 12:29:43] Capteur ID: 4, Type: Son, Valeur: 130.13, seconde: 0
+[2026-10-15 12:29:44] Capteur ID: 4, Type: Son, Valeur: 60.61, seconde: 1
+[2026-10-15 12:29:45] Capteur ID: 4, Type: Son, Valeur: 111.04, seconde: 2
+[2026-10-15 12:29:46] Capteur ID: 4, Type: Son, Valeur: 52.00, seconde: 3
+[2026-10-15 12:29:47] Capteur ID: 4, Type: Son, Valeur: 84.12, seconde: 4
+[2026-10-15 12:29:48] Capteur ID: 4, Type: Son, Valeur: 41.56, seconde: 5
+[2026-10-15 12:29:49] Capteur ID: 4, Type: Son, Valeur: 84.81, seconde: 6
+[2026-10-15 12:29:50] Capteur ID: 4, Type: Son, Valeur: 105.12, seconde: 7
+[2026-10-15 12:29:51] Capteur ID: 4, Type: Son, Valeur: 112.04, seconde: 8
+[2026-10-15 12:29:53] Capteur ID: 4, Type: Son, Valeur: 6.97, seconde: 9
+[2026-10-15 12:29:54] Capteur ID: 4, Type: Son, Valeur: 75.44, seconde: 10
+[2026-10-15 12:29:55] Capteur ID: 4, Type: Son, Valeur: 67.49, seconde: 11

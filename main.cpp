@@ -20,7 +20,7 @@ int main() {
     // Instanciation des capteurs
     Sensor* sensor1 = new temperatureSensor(1, "Temperature", 25.0f, &myServer);
     Sensor* sensor2 = new humiditySensor(2, "Humidite", 60.0f, &myServer);
-    Sensor* sensor3 = new lightSensor(3, "Luminosite", true, &myServer);
+    Sensor* sensor3 = new lightSensor(3, "Etat lumière", true, &myServer);
     Sensor* sensor4 = new soundSensor(4, "Son", 50.0f, &myServer);
     
     // Instanciation de l'ordonnanceur et ajout des capteurs
@@ -34,7 +34,7 @@ int main() {
     cout << "Simulation en cours. Appuyez sur Ctrl+C pour arrêter." << endl;
 
     int tick = 0;
-    while (!stopRequested && tick < 20) { // Limite à 10 ticks pour éviter une boucle infinie
+    while (!stopRequested && tick < 20) { // Limite à 20 ticks pour éviter une boucle infinie
         myScheduler.simulate(tick++);
         this_thread::sleep_for(chrono::seconds(1));
     }
