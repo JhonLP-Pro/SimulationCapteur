@@ -24,7 +24,7 @@ class Sensor{
     void update(int time);
     void execute();
     virtual string generateMeasurement() = 0; // Méthode virtuelle pure pour générer une mesure spécifique au capteur
-    virtual Sensor* clone() const = 0;
+    virtual Sensor* clone() const = 0; 
 };
 
 #endif // SENSOR_H
