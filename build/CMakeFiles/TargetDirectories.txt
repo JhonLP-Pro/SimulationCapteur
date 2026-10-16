@@ -1,3 +1,0 @@
-/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/TPAP4A.dir
-/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/edit_cache.dir
-/home/jjlapada/Documents/utbm/TPAP4A/build/CMakeFiles/rebuild_cache.dir
