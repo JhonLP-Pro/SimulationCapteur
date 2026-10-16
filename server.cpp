@@ -5,7 +5,7 @@ server::server() : consoleEnabled(true) {
     const string logFiles[] = {
         "log_Temperature.txt",
         "log_Humidite.txt",
-        "log_Luminosite.txt",
+        "log_Etat lumière.txt",
         "log_Son.txt"
     };
 
