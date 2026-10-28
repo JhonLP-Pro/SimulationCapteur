@@ -14,3 +14,7 @@ add_executable(TPAP4A
 	lightSensor.cpp
 	soundSensor.cpp
 )
+
+target_compile_definitions(TPAP4A PRIVATE
+	LOG_DIRECTORY="${CMAKE_CURRENT_BINARY_DIR}"
+)

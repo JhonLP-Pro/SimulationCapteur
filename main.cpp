@@ -39,7 +39,14 @@ int main() {
         this_thread::sleep_for(chrono::seconds(1));
     }
 
-    cout << "Simulation arrêtée. Les mesures sont enregistrées dans log.txt." << endl;
+    if (stopRequested) {
+        cout << "\nArrêt demandé par l'utilisateur." << endl;
+    } else {
+        cout << "Nombre maximal de tours atteint." << endl;
+    }
+
+    myServer.writeSummaryToFiles();
+    cout << "Simulation arrêtée proprement. Les mesures sont enregistrées dans le dossier build/." << endl;
 
     return 0;
 }

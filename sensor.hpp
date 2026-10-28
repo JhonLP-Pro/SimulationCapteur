@@ -12,6 +12,7 @@ class Sensor{
     int id;
     string type;
     server *serverPtr;
+    int currentTime;
     public:
     // Forme canonique coplienne
     Sensor();
@@ -22,7 +23,7 @@ class Sensor{
 
     // Méthodes
     void update(int time);
-    void execute();
+    virtual void execute();
     virtual string generateMeasurement() = 0; // Méthode virtuelle pure pour générer une mesure spécifique au capteur
     virtual Sensor* clone() const = 0; 
 };
