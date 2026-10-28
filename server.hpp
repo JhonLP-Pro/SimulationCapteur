@@ -25,6 +25,7 @@ class server{
 
     bool consoleEnabled;
     map<string, MeasurementStats> statistics;
+    string logPath(const string &type) const;
     string currentDateTime() const;
     void updateStatistics(const string &type, const string &measurement);
 
@@ -36,8 +37,8 @@ class server{
     ~server();
 
     //methodes
-    void consoleWrite(string data);
-    void fileWrite(string type, string data);
+    void consoleWrite(const string &data);
+    void fileWrite(const string &type, const string &data);
     void writeSummaryToFiles() const;
 
     friend ostream &operator<<(ostream &os, const server &s);

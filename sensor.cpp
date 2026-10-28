@@ -1,5 +1,4 @@
 #include "sensor.hpp"
-#include <random>
 
 // Constructeur par défaut
 Sensor::Sensor() : id(0), type("inconnu"), serverPtr(nullptr), currentTime(0) {}

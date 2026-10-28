@@ -4,7 +4,6 @@
 #define LOG_DIRECTORY "build"
 #endif
 
-//constructeur par defaut
 server::server() : consoleEnabled(true) {
     const string logFiles[] = {
         "log_Temperature.txt",
@@ -14,8 +13,7 @@ server::server() : consoleEnabled(true) {
     };
 
     for (const string &filename : logFiles) {
-        ofstream logFile(string(LOG_DIRECTORY) + "/" + filename,
-                         ios::out | ios::trunc);
+        ofstream logFile(string(LOG_DIRECTORY) + "/" + filename);
         if (!logFile.is_open()) {
             cerr << "Erreur lors de la reinitialisation du fichier "
                  << string(LOG_DIRECTORY) + "/" + filename << "." << endl;
@@ -23,10 +21,8 @@ server::server() : consoleEnabled(true) {
     }
 }
 
-// Destructeur
 server::~server() {}
 
-// Constructeur de copie
 server::server(const server &s)
     : consoleEnabled(s.consoleEnabled), statistics(s.statistics) {}
 
@@ -38,25 +34,28 @@ server &server::operator=(const server &s) {
     return *this;
 }
 
-// Affichage dans la console
-void server::consoleWrite(string data) {
+void server::consoleWrite(const string &data) {
     if (consoleEnabled) {
         cout << "[" << currentDateTime() << "] " << data << endl;
     }
 }
 
-// Ajoute la mesure au fichier correspondant au type pour la session en cours
-void server::fileWrite(string type, string measurement) {
+string server::logPath(const string &type) const {
+    return string(LOG_DIRECTORY) + "/log_" + type + ".txt";
+}
+
+void server::fileWrite(const string &type, const string &measurement) {
     updateStatistics(type, measurement);
 
-    const string filename = string(LOG_DIRECTORY) + "/log_" + type + ".txt";
+    const string filename = logPath(type);
     ofstream logFile(filename, ios::out | ios::app);
-    if (logFile.is_open()) {
-        logFile << "[" << currentDateTime() << "] " << measurement << endl;
-    } else {
+    if (!logFile.is_open()) {
         cerr << "Erreur lors de l'ouverture du fichier " << filename
              << " pour l'ecriture." << endl;
+        return;
     }
+
+    logFile << "[" << currentDateTime() << "] " << measurement << endl;
 }
 
 void server::updateStatistics(const string &type, const string &measurement) {
@@ -69,10 +68,8 @@ void server::updateStatistics(const string &type, const string &measurement) {
     }
 
     string value = measurement.substr(valuePosition + 8);
-    const size_t separatorPosition = value.find(',');
-    if (separatorPosition != string::npos) {
-        value = value.substr(0, separatorPosition);
-    }
+    value = value.substr(0, value.find(','));
+
     if (value == "true") {
         ++stats.trueCount;
         return;
@@ -104,7 +101,7 @@ void server::writeSummaryToFiles() const {
     for (const auto &entry : statistics) {
         const string &type = entry.first;
         const MeasurementStats &stats = entry.second;
-        const string filename = string(LOG_DIRECTORY) + "/log_" + type + ".txt";
+        const string filename = logPath(type);
         ofstream logFile(filename, ios::out | ios::app);
 
         if (!logFile.is_open()) {
