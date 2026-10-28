@@ -18,3 +18,5 @@ add_executable(TPAP4A
 target_compile_definitions(TPAP4A PRIVATE
 	LOG_DIRECTORY="${CMAKE_CURRENT_BINARY_DIR}"
 )
+
+#chaque fichier log est généré dans le répertoire de construction, mais on peut changer le répertoire de sortie en modifiant la variable LOG_DIRECTORY
